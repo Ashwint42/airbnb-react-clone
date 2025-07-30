@@ -1,1 +1,16 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Cereal";
+    src: url('./assets/fonts/AirbnbCerealVF_W_Wght.2d9d32865ef1262644c455b3ead871e9.woff2');
+    font-weight: normal;
+}
+
+:root {
+    --color-pink: #FF385C;
+    --font-regular: "Cereal"
+}
+
+body {
+    font-family: "Cereal";
+}
