@@ -8,7 +8,14 @@
 
 :root {
     --color-pink: #FF385C;
-    --font-regular: "Cereal"
+    --font-regular: "Cereal";
+    --color-primary: #222222;
+    --color-secondary: #6A6A6A;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--color-primary)
 }
 
 body {

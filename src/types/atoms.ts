@@ -2,7 +2,7 @@ import type { JSX } from "react";
 
 export type ButtonProps = {
   children: JSX.Element | string;
-  className: string;
+  className?: string;
 };
 
 export type SearchBubbleProps = {
@@ -10,3 +10,10 @@ export type SearchBubbleProps = {
   secondaryText: string;
   className: string;
 };
+
+export type TabItemProps = {
+  videoSource: string;
+  label: string;
+};
+
+
