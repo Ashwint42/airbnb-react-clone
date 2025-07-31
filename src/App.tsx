@@ -1,5 +1,6 @@
 import "./App.css";
-import HomeOrganism from "./components/organisms/HomeOraganism";
+import CardsSection from "./components/organisms/CardsSection";
+import { tabs } from "./data/tabs";
 
 function App() {
   return (
@@ -7,7 +8,9 @@ function App() {
       <header className="h-[200px] bg-red-400"></header>
 
       <main className="w-full">
-        <HomeOrganism></HomeOrganism>
+        {tabs.map((tab) => (
+          <CardsSection home={tab.home}></CardsSection>
+        ))}
       </main>
     </>
   );

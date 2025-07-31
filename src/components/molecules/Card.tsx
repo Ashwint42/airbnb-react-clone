@@ -1,27 +1,33 @@
 import CardBadge from "../atoms/CardBadge";
 import LikeButton from "../atoms/LikeButton";
+import type { CardDetails } from "../../types/home.types";
 
-function Card() {
+type CardProps = {
+  details: CardDetails;
+};
+
+function Card({ details }: CardProps) {
   return (
     <div className="card rounded-[20px] relative">
       <div className="flex flex-col gap-2">
         <div className="image-container h-[183.812px] aspect-[20/19]">
           <img
             className="rounded-[20px] h-[183.812px] object-cover"
-            src="	https://a0.muscache.com/im/pictures/hosting/Hosting-1270314768198309910/original/c389f712-5665-4b38-b83b-29f9b8fd73d0.jpeg?im_w=480"
+            src={details.img}
             alt=""
           />
         </div>
-        <CardBadge></CardBadge>
+
+        {details.hasBadge && <CardBadge></CardBadge>}
         <LikeButton></LikeButton>
 
         <div className="-mt-[5px] ml-[6px]">
           <span className="text-[13px] font-semibold inline-block mb-0">
-            Apartment in Narayanpur
+            {details.title}
           </span>
           <div className="sub-text-container -mt-[7px] -ml-[2px]">
             <span className=" !text-[var(--color-secondary)] text-[12px] ">
-              ₹3,878 for 2 nights
+              ₹{details.price.toLocaleString("hi-IN")} for 2 nights
             </span>
             <span className=" !text-[#bdbdbd] transform translate-y-[8px]">
               &nbsp;·&nbsp;
