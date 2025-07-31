@@ -18,7 +18,7 @@ function CardsSection({ home }: CardsSectionProp) {
               <h2 className="text-sm flex">
                 <span className="text-[20px] font-semibold leading-[24px] tracking-[-0.18px]">
                   {section.title}
-                  <span>
+                  <span className="inline-block ml-[2px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 32 32"
