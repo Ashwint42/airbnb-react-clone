@@ -2,8 +2,14 @@
 
 @font-face {
     font-family: "Cereal";
+    src: url('./assets/fonts/AirbnbCereal_W_Md.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Cereal-Bold";
     src: url('./assets/fonts/AirbnbCerealVF_W_Wght.2d9d32865ef1262644c455b3ead871e9.woff2');
-    font-weight: normal;
+    font-weight: bolder;
 }
 
 :root {
@@ -21,5 +27,5 @@
 }
 
 body {
-    font-family: "Cereal";
+    font-family: "Cereal-Bold";
 }
