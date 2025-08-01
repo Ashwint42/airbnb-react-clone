@@ -35,7 +35,7 @@ export const tabs = [
             {
               img: "https://a0.muscache.com/im/pictures/hosting/Hosting-1096365467309628265/original/aa2f1eed-2157-4932-8be8-ebe60a697732.jpeg?im_w=480",
               hasBadge: true,
-              title: "Flat in Banglore Urban",
+              title: "Flat in Bangalore Urban",
               price: 3766,
               rating: 4.82,
             },
@@ -56,7 +56,7 @@ export const tabs = [
             {
               img: "https://a0.muscache.com/im/pictures/hosting/Hosting-1096365467309628265/original/aa2f1eed-2157-4932-8be8-ebe60a697732.jpeg?im_w=480",
               hasBadge: true,
-              title: "Flat in Banglore Urban",
+              title: "Flat in Bangalore Urban",
               price: 3766,
               rating: 4.82,
             },
@@ -89,7 +89,7 @@ export const tabs = [
             {
               img: "https://a0.muscache.com/im/pictures/hosting/Hosting-1096365467309628265/original/aa2f1eed-2157-4932-8be8-ebe60a697732.jpeg?im_w=480",
               hasBadge: true,
-              title: "Flat in Banglore Urban",
+              title: "Flat in Bangalore Urban",
               price: 3766,
               rating: 4.82,
             },
@@ -110,7 +110,7 @@ export const tabs = [
             {
               img: "https://a0.muscache.com/im/pictures/hosting/Hosting-1096365467309628265/original/aa2f1eed-2157-4932-8be8-ebe60a697732.jpeg?im_w=480",
               hasBadge: true,
-              title: "Flat in Banglore Urban",
+              title: "Flat in Bangalore Urban",
               price: 3766,
               rating: 4.82,
             },
@@ -171,7 +171,7 @@ export const tabs = [
             {
               img: "https://a0.muscache.com/im/pictures/hosting/Hosting-1096365467309628265/original/aa2f1eed-2157-4932-8be8-ebe60a697732.jpeg?im_w=480",
               hasBadge: true,
-              title: "Flat in Banglore Urban",
+              title: "Flat in Bangalore Urban",
               price: 3766,
               rating: 4.82,
             },
@@ -192,7 +192,7 @@ export const tabs = [
             {
               img: "https://a0.muscache.com/im/pictures/hosting/Hosting-1096365467309628265/original/aa2f1eed-2157-4932-8be8-ebe60a697732.jpeg?im_w=480",
               hasBadge: true,
-              title: "Flat in Banglore Urban",
+              title: "Flat in Bangalore Urban",
               price: 3766,
               rating: 4.82,
             },

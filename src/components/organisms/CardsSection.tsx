@@ -3,17 +3,17 @@ import type { SectionType, SearchBubbleType } from "../../types/home.types";
 import * as uuid from "uuid";
 
 type CardsSectionProp = {
-  home: {
+  tab: {
     searchBubbles: SearchBubbleType[];
     sections: SectionType[];
   };
 };
 
-function CardsSection({ home }: CardsSectionProp) {
+function CardsSection({ tab }: CardsSectionProp) {
   return (
     <>
-      {home.sections.map((section) => (
-        <div key={uuid.v4()} className="grid w-full mb-2">
+      {tab.sections.map((section) => (
+        <div key={uuid.v4()} className="grid w-full -mb-2">
           <div>
             <div className="m-8 mb-[14px] flex justify-between items-center">
               <h2 className="text-sm flex">

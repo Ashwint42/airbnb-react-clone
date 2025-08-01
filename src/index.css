@@ -11,6 +11,15 @@
     font-weight: bolder;
 }
 
+@theme {
+    --color-pink: #FF385C;
+    --color-primary: #222222;
+    --color-secondary: #6A6A6A;
+    --text-size-13: 13px;
+    --text-size-12: 12px;
+    --rounded-size-20: 20px;
+}
+
 :root {
     --color-pink: #FF385C;
     --font-regular: "Cereal";

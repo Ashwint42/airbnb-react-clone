@@ -6,6 +6,8 @@ type CardProps = {
   details: CardDetails;
 };
 
+const PROPERTY_DESCRIPTION_POSTFIX = "for 2 nights";
+
 function Card({ details }: CardProps) {
   return (
     <div className="card rounded-[20px] relative">
@@ -22,14 +24,15 @@ function Card({ details }: CardProps) {
         <LikeButton></LikeButton>
 
         <div className="-mt-[5px] ml-[6px]">
-          <span className="text-[13px] font-medium inline-block ml-[-1px] transform translate-y-[1px] translate-x-[-1px]">
+          <span className="text-size-13 font-medium inline-block ml-[-1px] transform translate-y-[1px] translate-x-[-1px]">
             {details.title}
           </span>
           <div className="sub-text-container -mt-[7px] -ml-[2px]">
-            <span className=" !text-[var(--color-secondary)] text-[12px] ">
-              ₹{details.price.toLocaleString("hi-IN")} for 2 nights
+            <span className="!text-[var(--color-secondary)] text-size-12 ">
+              ₹{details.price.toLocaleString("hi-IN")}{" "}
+              {PROPERTY_DESCRIPTION_POSTFIX}
             </span>
-            <span className=" !text-[#bdbdbd] transform translate-y-[8px]">
+            <span className="!text-[#bdbdbd] transform translate-y-[8px]">
               &nbsp;·&nbsp;
             </span>
             <span className="inline-block transform translate-y-[1.3px] translate-x-[-2.5px]">
@@ -53,7 +56,7 @@ function Card({ details }: CardProps) {
               </svg>
             </span>
             <span className="text-[12px] !text-[var(--color-secondary)]">
-              4.99
+              {details.rating}
             </span>
           </div>
         </div>
