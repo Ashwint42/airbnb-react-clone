@@ -13,7 +13,7 @@ function CardsSection({ tab }: CardsSectionProp) {
   return (
     <>
       {tab.sections.map((section) => (
-        <div key={uuid.v4()} className="grid w-full -mb-2">
+        <div key={uuid.v4()} className="grid w-full mb-2">
           <div>
             <div className="m-8 mb-[14px] flex justify-between items-center">
               <h2 className="text-sm flex">

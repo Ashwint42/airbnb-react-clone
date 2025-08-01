@@ -1,6 +1,6 @@
 function Logo() {
   return (
-    <div>
+    <div className="w-[225.28px]">
       <svg
         width="102"
         height="32"

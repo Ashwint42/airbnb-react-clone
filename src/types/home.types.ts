@@ -15,3 +15,10 @@ export type SectionType = {
   title: string;
   content: CardDetails[];
 };
+
+export type TabType = {
+  videoSource: string;
+  label: string;
+  styles: string;
+  additionalStyles?: string;
+};
