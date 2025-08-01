@@ -1,5 +1,6 @@
 import Card from "../molecules/Card";
 import type { SectionType, SearchBubbleType } from "../../types/home.types";
+import * as uuid from "uuid";
 
 type CardsSectionProp = {
   home: {
@@ -12,14 +13,15 @@ function CardsSection({ home }: CardsSectionProp) {
   return (
     <>
       {home.sections.map((section) => (
-        <div className="grid w-full -mb-2">
+        <div key={uuid.v4()} className="grid w-full mb-2">
           <div>
             <div className="m-8 mb-[14px] flex justify-between items-center">
               <h2 className="text-sm flex">
-                <span className="text-[20px] font-semibold leading-[24px] tracking-[-0.18px]">
+                <span className="text-[20px] font-semibold leading-[24px] tracking-[-0.18px] ">
                   {section.title}
                   <span className="inline-block ml-[2px]">
                     <svg
+                      className="inline-block mt-[-1px]"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 32 32"
                       aria-hidden="true"
@@ -109,7 +111,7 @@ function CardsSection({ home }: CardsSectionProp) {
               }}
             >
               {section.content.map((item) => (
-                <Card details={item}></Card>
+                <Card key={uuid.v4()} details={item}></Card>
               ))}
             </div>
           </div>

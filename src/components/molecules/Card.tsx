@@ -22,7 +22,7 @@ function Card({ details }: CardProps) {
         <LikeButton></LikeButton>
 
         <div className="-mt-[5px] ml-[6px]">
-          <span className="text-[13px] font-semibold inline-block mb-0">
+          <span className="text-[13px] font-medium inline-block ml-[-1px] transform translate-y-[1px] translate-x-[-1px]">
             {details.title}
           </span>
           <div className="sub-text-container -mt-[7px] -ml-[2px]">

@@ -1,6 +1,7 @@
 import "./App.css";
 import CardsSection from "./components/organisms/CardsSection";
 import { tabs } from "./data/tabs";
+import * as uuid from "uuid";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
 
       <main className="w-full">
         {tabs.map((tab) => (
-          <CardsSection home={tab.home}></CardsSection>
+          <CardsSection key={uuid.v4()} home={tab.home}></CardsSection>
         ))}
       </main>
     </>

@@ -14,7 +14,7 @@ export const tabs = [
             {
               img: "https://a0.muscache.com/im/pictures/hosting/Hosting-1270314768198309910/original/c389f712-5665-4b38-b83b-29f9b8fd73d0.jpeg?im_w=480",
               hasBadge: true,
-              title: "Apartment in Narayanpur",
+              title: "Flat in Bangalore Urban",
               price: 3878,
               rating: 4.99,
             },
@@ -63,7 +63,7 @@ export const tabs = [
           ],
         },
         {
-          title: "Popular homes in Bengaluru",
+          title: "Available in Ernakulam this weekend",
           content: [
             {
               img: "https://a0.muscache.com/im/pictures/hosting/Hosting-1270314768198309910/original/c389f712-5665-4b38-b83b-29f9b8fd73d0.jpeg?im_w=480",
