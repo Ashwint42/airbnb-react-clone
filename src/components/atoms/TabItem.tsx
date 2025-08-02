@@ -1,13 +1,20 @@
-import { type TabType } from "../../types/home.types";
+import type { TabType, Tabs } from "../../types/home.types";
 import clsx from "clsx";
 
 type TabProps = {
   tab: TabType;
+  currentTab: Tabs;
+  setCurrentTab: React.Dispatch<React.SetStateAction<Tabs>>;
 };
 
-function TabItem({ tab }: TabProps) {
+function TabItem({ tab, currentTab, setCurrentTab }: TabProps) {
   return (
-    <div className="flex justify-between mt-2">
+    <div
+      className={clsx("flex justify-between mt-2", {
+        "border-b-3": currentTab === tab.label,
+      })}
+      onClick={() => setCurrentTab(tab.label)}
+    >
       <a
         className={clsx(
           "tab-item flex  items-center mb-3",
@@ -22,8 +29,11 @@ function TabItem({ tab }: TabProps) {
         </span>
         <span
           className={clsx(
-            "inline-block text-[14px] leading-[18px] mb-1 !text-secondary",
-            tab.styles
+            "inline-block text-[14px] leading-[18px] mb-1 text-blue-500",
+            tab.labelStyles,
+            {
+              "font-bold !text-primary": currentTab === tab.label,
+            }
           )}
         >
           {tab.label}

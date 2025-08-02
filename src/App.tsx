@@ -6,8 +6,13 @@ import * as uuid from "uuid";
 import Logo from "./components/atoms/Logo";
 import { tabProperties } from "./utils";
 import TabItem from "./components/atoms/TabItem";
+import SearchPanelItem from "./components/atoms/SearchPanelItem";
+import { useState } from "react";
+import type { Tabs } from "./types/home.types";
 
 function App() {
+  const [currentTab, setcurrentTab] = useState<Tabs>("Homes");
+
   return (
     <>
       <header className="h-[200px]  px-8">
@@ -16,7 +21,12 @@ function App() {
 
           <div className="tab-island flex w-[500px] h-12 mt-2 justify-center gap-[35px]">
             {tabProperties.map((property) => (
-              <TabItem key={uuid.v4()} tab={property}></TabItem>
+              <TabItem
+                key={uuid.v4()}
+                tab={property}
+                currentTab={currentTab}
+                setCurrentTab={setcurrentTab}
+              ></TabItem>
             ))}
           </div>
 
@@ -74,11 +84,17 @@ function App() {
             </div>
           </div>
         </div>
+
+        <div className="searchPanel flex justify-center items-center mt-3">
+          <div className="grid grid-cols-[minmax(0,2fr)_1px_minmax(0,1fr)_1px_minmax(0,1fr)_1px_minmax(0,2fr)_auto] items-center w-full h-[66px] max-w-[850px] rounded-4xl shadow-[0_8px_24px_0_rgba(0,0,0,0.1),_0_0_0_1px_rgba(0,0,0,0.02)] border-[1px] border-gray-200">
+            <SearchPanelItem></SearchPanelItem>
+          </div>
+        </div>
       </header>
 
       <main className="w-full">
         {tabs.map((tab) => (
-          <CardsSection key={uuid.v4()} tab={tab.home}></CardsSection>
+          <CardsSection key={uuid.v4()} tab={tab[currentTab]}></CardsSection>
         ))}
       </main>
     </>

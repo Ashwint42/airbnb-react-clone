@@ -18,7 +18,9 @@ export type SectionType = {
 
 export type TabType = {
   videoSource: string;
-  label: string;
-  styles: string;
+  label: Tabs;
+  labelStyles: string;
   additionalStyles?: string;
 };
+
+export type Tabs = "Homes" | "Experiences" | "Services";
