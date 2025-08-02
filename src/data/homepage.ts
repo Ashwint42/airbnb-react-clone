@@ -2,10 +2,43 @@ export const tabs = [
   {
     Homes: {
       searchBubbles: [
-        { heading: "Where", subHeading: "Search destinations" },
-        { heading: "Check in", subHeading: "Add dates" },
-        { heading: "Check out", subHeading: "Add dates" },
-        { heading: "Who", subHeading: "Add guests" },
+        {
+          label: "Where",
+          subText: "Search destinations",
+          styles: {
+            wrapper: "px-8 py-[15px] h-[66px]",
+            label: "text-[12px] font-medium",
+            subText: "inline-block text-[14px] !text-secondary -mt-1",
+          },
+        },
+        {
+          label: "Check in",
+          subText: "Add dates",
+          styles: {
+            wrapper: "py-[15px] px-[24px] h-[66px]",
+            label: "text-[12px] font-medium mb-1",
+            subText: "inline-block text-[14px] !text-secondary mt-[-8px] ",
+          },
+        },
+        {
+          label: "Check out",
+          subText: "Add dates",
+          styles: {
+            wrapper: "px-8 py-[15px] h-[66px]",
+            label: "text-[12px] font-medium mb-1",
+            subText: "inline-block text-[14px] !text-secondary ",
+          },
+        },
+        {
+          label: "Who",
+          subText: "Add guests",
+          styles: {
+            wrapper: "py-[15px] pr-[130.904px] pl-[24px] h-[66px]",
+            label: "text-[12px] font-medium",
+            subText: "inline-block text-[14px] !text-secondary",
+          },
+          isLast: true,
+        },
       ],
       sections: [
         {
@@ -230,10 +263,35 @@ export const tabs = [
     },
     Experiences: {
       searchBubbles: [
-        { heading: "Where", subHeading: "Search destinations" },
-        { heading: "Check in", subHeading: "Add dates" },
-        { heading: "Check out", subHeading: "Add dates" },
-        { heading: "Who", subHeading: "Add guests" },
+        {
+          label: "Where",
+          subText: "Search destinations",
+          styles: {
+            wrapper: "px-8 py-[15px] h-[66px]",
+            label: "text-[12px] font-medium",
+            subText: "inline-block text-[14px] !text-secondary -mt-1",
+          },
+        },
+        {
+          label: "Date",
+          subText: "Add dates",
+          styles: {
+            wrapper: "py-[15px] px-[24px] h-[66px]",
+            label: "text-[12px] font-medium mb-1",
+            subText: "inline-block text-[14px] !text-secondary mt-[-8px] ",
+          },
+        },
+
+        {
+          label: "Who",
+          subText: "Add guests",
+          styles: {
+            wrapper: "py-[15px] pr-[130.904px] pl-[24px] h-[66px]",
+            label: "text-[12px] font-medium",
+            subText: "inline-block text-[14px] !text-secondary",
+          },
+          isLast: true,
+        },
       ],
       sections: [
         {
@@ -458,10 +516,35 @@ export const tabs = [
     },
     Services: {
       searchBubbles: [
-        { heading: "Where", subHeading: "Search destinations" },
-        { heading: "Check in", subHeading: "Add dates" },
-        { heading: "Check out", subHeading: "Add dates" },
-        { heading: "Who", subHeading: "Add guests" },
+        {
+          label: "Where",
+          subText: "Search destinations",
+          styles: {
+            wrapper: "px-8 py-[15px] h-[66px]",
+            label: "text-[12px] font-medium",
+            subText: "inline-block text-[14px] !text-secondary -mt-1",
+          },
+        },
+        {
+          label: "Date",
+          subText: "Add dates",
+          styles: {
+            wrapper: "py-[15px] px-[24px] h-[66px]",
+            label: "text-[12px] font-medium mb-1",
+            subText: "inline-block text-[14px] !text-secondary mt-[-8px] ",
+          },
+        },
+
+        {
+          label: "Type of Service",
+          subText: "Add service",
+          styles: {
+            wrapper: "py-[15px] pr-[130.904px] pl-[24px] h-[66px]",
+            label: "text-[12px] font-medium",
+            subText: "inline-block text-[14px] !text-secondary",
+          },
+          isLast: true,
+        },
       ],
       sections: [
         {

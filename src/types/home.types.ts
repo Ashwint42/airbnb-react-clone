@@ -7,8 +7,14 @@ export type CardDetails = {
 };
 
 export type SearchBubbleType = {
-  heading: string;
-  subHeading: string;
+  label: string;
+  subText: string;
+  styles: {
+    wrapper: string;
+    label: string;
+    subText: string;
+  };
+  isLast?: boolean;
 };
 
 export type SectionType = {

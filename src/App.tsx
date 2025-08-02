@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <header className="h-[200px]  px-8">
+      <header className="h-[200px] px-8">
         <div className="primary-nav flex justify-between items-center relative">
           <Logo></Logo>
 
@@ -87,7 +87,9 @@ function App() {
 
         <div className="searchPanel flex justify-center items-center mt-3">
           <div className="grid grid-cols-[minmax(0,2fr)_1px_minmax(0,1fr)_1px_minmax(0,1fr)_1px_minmax(0,2fr)_auto] items-center w-full h-[66px] max-w-[850px] rounded-4xl shadow-[0_8px_24px_0_rgba(0,0,0,0.1),_0_0_0_1px_rgba(0,0,0,0.02)] border-[1px] border-gray-200">
-            <SearchPanelItem></SearchPanelItem>
+            <SearchPanelItem
+              currentTabData={tabs[0][currentTab].searchBubbles}
+            ></SearchPanelItem>
           </div>
         </div>
       </header>

@@ -1,11 +1,18 @@
-import React from "react";
-import { SearchPanelItemProperties } from "../../utils";
 import * as uuid from "uuid";
+import type { SearchBubbleType } from "../../types/home.types";
+import React from "react";
 
-function SearchPanelItem() {
+type SearchBubbleProp = {
+  currentTabData: SearchBubbleType[];
+};
+
+function SearchPanelItem({ currentTabData }: SearchBubbleProp) {
+  {
+    console.log(currentTabData);
+  }
   return (
     <>
-      {SearchPanelItemProperties.map((item) => (
+      {currentTabData.map((item: SearchBubbleType) => (
         <React.Fragment key={uuid.v4()}>
           <div className={item.styles.wrapper}>
             <p className={item.styles.label}>{item.label}</p>

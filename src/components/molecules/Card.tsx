@@ -14,7 +14,7 @@ function Card({ details }: CardProps) {
       <div className="flex flex-col gap-2">
         <div className="image-container h-[183.812px] aspect-[20/19]">
           <img
-            className="rounded-[20px] h-[183.812px] object-cover w-full h-full"
+            className="rounded-[20px] h-[183.812px] object-cover w-full"
             src={details.img}
             alt=""
           />
