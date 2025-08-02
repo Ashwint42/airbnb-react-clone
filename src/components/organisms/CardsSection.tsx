@@ -1,6 +1,7 @@
 import Card from "../molecules/Card";
 import type { SectionType, SearchBubbleType } from "../../types/home.types";
 import * as uuid from "uuid";
+import { useRef } from "react";
 
 type CardsSectionProp = {
   tab: {
@@ -10,9 +11,22 @@ type CardsSectionProp = {
 };
 
 function CardsSection({ tab }: CardsSectionProp) {
+  const scrollElement = useRef<HTMLDivElement[]>([]);
+
+  function scrollToTarget(index: number) {
+    const el = scrollElement.current[index];
+    if (el) {
+      el.scrollBy({
+        left: 418,
+        behavior: "smooth",
+      });
+    }
+    console.log(el.clientWidth);
+  }
+
   return (
     <>
-      {tab.sections.map((section) => (
+      {tab.sections.map((section, index) => (
         <div key={uuid.v4()} className="grid w-full mb-2">
           <div>
             <div className="m-8 mb-[14px] flex justify-between items-center">
@@ -46,8 +60,8 @@ function CardsSection({ tab }: CardsSectionProp) {
                 </span>
               </h2>
               <div className="ml-auto flex items-center">
-                <div className="columns-2 gap-1">
-                  <button>
+                <div className="columns-2 gap-1 flex">
+                  <button className=" border-1 border-[#C1C1C1] opacity-50 w-6 h-6 bg-[white] rounded-[50%] p-1 flex justify-center items-center">
                     <span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -57,10 +71,10 @@ function CardsSection({ tab }: CardsSectionProp) {
                         focusable="false"
                         style={{
                           display: "block",
-                          fill: "none",
+                          fill: "rgb(193, 193, 193)",
                           height: "12px",
                           width: "12px",
-                          stroke: "currentcolor",
+                          stroke: "rgb(193, 193, 193)",
                           strokeWidth: 4,
                           overflow: "visible",
                         }}
@@ -72,7 +86,10 @@ function CardsSection({ tab }: CardsSectionProp) {
                       </svg>
                     </span>
                   </button>
-                  <button>
+                  <button
+                    className="w-6 h-6 bg-[#F2F2F2] rounded-[50%] flex justify-center items-center"
+                    onClick={() => scrollToTarget(index)}
+                  >
                     <span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -108,6 +125,9 @@ function CardsSection({ tab }: CardsSectionProp) {
                 gridAutoColumns: "calc(16.6667% - 9.16667px)",
                 gridTemplateRows: "225.812px",
                 gridAutoFlow: "column",
+              }}
+              ref={(el) => {
+                if (el) scrollElement.current[index] = el;
               }}
             >
               {section.content.map((item) => (
