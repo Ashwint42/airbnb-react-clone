@@ -1,7 +1,11 @@
+import { useState } from "react";
+
 function LikeButton() {
+  const [isLiked, setIsLiked] = useState<boolean>(false);
+
   return (
     <div className="absolute right-0 mt-3 ml-3 mr-3 ">
-      <button>
+      <button onClick={() => setIsLiked(!isLiked)}>
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -11,10 +15,10 @@ function LikeButton() {
             focusable="false"
             style={{
               display: "block",
-              fill: "rgba(0, 0, 0, 0.5)",
+              fill: isLiked ? "var(--color-pink)" : "rgba(0, 0, 0, 0.5)",
               height: "24px",
               width: "24px",
-              stroke: "#FFFFFF",
+              stroke: isLiked ? "var(--color-pink)" : "#FFFFFF",
               strokeWidth: 2,
               overflow: "visible",
             }}
