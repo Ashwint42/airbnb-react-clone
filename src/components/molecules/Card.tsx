@@ -20,7 +20,7 @@ function Card({ details }: CardProps) {
           />
         </div>
 
-        {details.hasBadge && <CardBadge></CardBadge>}
+        {details.hasBadge && <CardBadge label={details.badgeLabel}></CardBadge>}
         <LikeButton></LikeButton>
 
         <div className="-mt-[5px] ml-[6px]">

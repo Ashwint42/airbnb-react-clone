@@ -7,9 +7,6 @@ type SearchBubbleProp = {
 };
 
 function SearchPanelItem({ currentTabData }: SearchBubbleProp) {
-  {
-    console.log(currentTabData);
-  }
   return (
     <>
       {currentTabData.map((item: SearchBubbleType) => (

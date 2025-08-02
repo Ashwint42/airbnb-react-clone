@@ -2,13 +2,13 @@ import "./App.css";
 import CardsSection from "./components/organisms/CardsSection";
 import { tabs } from "./data/homepage";
 import * as uuid from "uuid";
-
 import Logo from "./components/atoms/Logo";
 import { tabProperties } from "./utils";
 import TabItem from "./components/atoms/TabItem";
 import SearchPanelItem from "./components/atoms/SearchPanelItem";
 import { useState } from "react";
 import type { Tabs } from "./types/home.types";
+import clsx from "clsx";
 
 function App() {
   const [currentTab, setcurrentTab] = useState<Tabs>("Homes");
@@ -86,7 +86,17 @@ function App() {
         </div>
 
         <div className="searchPanel flex justify-center items-center mt-3">
-          <div className="grid grid-cols-[minmax(0,2fr)_1px_minmax(0,1fr)_1px_minmax(0,1fr)_1px_minmax(0,2fr)_auto] items-center w-full h-[66px] max-w-[850px] rounded-4xl shadow-[0_8px_24px_0_rgba(0,0,0,0.1),_0_0_0_1px_rgba(0,0,0,0.02)] border-[1px] border-gray-200">
+          <div
+            className={clsx(
+              "items-center w-full h-[66px] max-w-[850px] rounded-4xl shadow-[0_8px_24px_0_rgba(0,0,0,0.1),_0_0_0_1px_rgba(0,0,0,0.02)] border-[1px] border-gray-200",
+              {
+                "grid  grid-cols-[minmax(0,2fr)_1px_minmax(0,1fr)_1px_minmax(0,1fr)_1px_minmax(0,2fr)_auto]":
+                  currentTab === "Homes",
+                "grid grid-cols-[minmax(0,1fr)_1px_minmax(0,1fr)_1px_minmax(0,1fr)_auto]":
+                  currentTab !== "Homes",
+              }
+            )}
+          >
             <SearchPanelItem
               currentTabData={tabs[0][currentTab].searchBubbles}
             ></SearchPanelItem>

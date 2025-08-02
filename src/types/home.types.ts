@@ -4,6 +4,7 @@ export type CardDetails = {
   title: string;
   price: number;
   rating: number;
+  badgeLabel?: string;
 };
 
 export type SearchBubbleType = {
