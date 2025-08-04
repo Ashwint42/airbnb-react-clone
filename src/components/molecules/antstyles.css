@@ -1,0 +1,14 @@
+.ant-modal-title {
+    color: blue !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    color: var(--color-pink) !important;
+    margin-bottom: 40px !important;
+    margin-top: 25px !important;
+}
+
+.ant-modal-body {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+}

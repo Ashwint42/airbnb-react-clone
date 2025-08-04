@@ -2,7 +2,6 @@ import "./App.css";
 import CardsSection from "./components/organisms/CardsSection";
 import { tabs } from "./data/homepage";
 import * as uuid from "uuid";
-// import Logo from "./components/atoms/Logo";
 import { tabProperties } from "./utils";
 import TabItem from "./components/atoms/TabItem";
 import SearchPanelItem from "./components/atoms/SearchPanelItem";
