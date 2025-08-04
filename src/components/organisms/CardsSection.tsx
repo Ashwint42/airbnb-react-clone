@@ -2,6 +2,9 @@ import Card from "../molecules/Card";
 import type { SectionType, SearchBubbleType } from "../../types/home.types";
 import * as uuid from "uuid";
 import { useRef } from "react";
+import ArrowRight from "../../assets/svg/rightArrow.svg?react";
+import CarouselArrowRight from "../../assets/svg/carouselArrowRight.svg?react";
+import CarouselArrowLeft from "../../assets/svg/carouselArrowLeft.svg?react";
 
 type CardsSectionProp = {
   tab: {
@@ -21,7 +24,6 @@ function CardsSection({ tab }: CardsSectionProp) {
         behavior: "smooth",
       });
     }
-    console.log(el.clientWidth);
   }
 
   return (
@@ -34,28 +36,7 @@ function CardsSection({ tab }: CardsSectionProp) {
                 <span className="text-[20px] font-semibold leading-[24px] tracking-[-0.18px] ">
                   {section.title}
                   <span className="inline-block ml-[2px]">
-                    <svg
-                      className="inline-block mt-[-1px]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 32 32"
-                      aria-hidden="true"
-                      role="presentation"
-                      focusable="false"
-                      style={{
-                        display: "inline-block",
-                        fill: "none",
-                        height: "12px",
-                        width: "12px",
-                        stroke: "currentcolor",
-                        strokeWidth: 5.33333,
-                        overflow: "visible",
-                      }}
-                    >
-                      <path
-                        fill="none"
-                        d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"
-                      ></path>
-                    </svg>
+                    <ArrowRight></ArrowRight>
                   </span>
                 </span>
               </h2>
@@ -63,27 +44,7 @@ function CardsSection({ tab }: CardsSectionProp) {
                 <div className="columns-2 gap-1 flex">
                   <button className=" border-1 border-[#C1C1C1] opacity-50 w-6 h-6 bg-[white] rounded-[50%] p-1 flex justify-center items-center">
                     <span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 32 32"
-                        aria-hidden="true"
-                        role="presentation"
-                        focusable="false"
-                        style={{
-                          display: "block",
-                          fill: "rgb(193, 193, 193)",
-                          height: "12px",
-                          width: "12px",
-                          stroke: "rgb(193, 193, 193)",
-                          strokeWidth: 4,
-                          overflow: "visible",
-                        }}
-                      >
-                        <path
-                          fill="none"
-                          d="M20 28 8.7 16.7a1 1 0 0 1 0-1.4L20 4"
-                        ></path>
-                      </svg>
+                      <CarouselArrowLeft></CarouselArrowLeft>
                     </span>
                   </button>
                   <button
@@ -91,27 +52,7 @@ function CardsSection({ tab }: CardsSectionProp) {
                     onClick={() => scrollToTarget(index)}
                   >
                     <span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 32 32"
-                        aria-hidden="true"
-                        role="presentation"
-                        focusable="false"
-                        style={{
-                          display: "block",
-                          fill: "none",
-                          height: "12px",
-                          width: "12px",
-                          stroke: "currentcolor",
-                          strokeWidth: 4,
-                          overflow: "visible",
-                        }}
-                      >
-                        <path
-                          fill="none"
-                          d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"
-                        ></path>
-                      </svg>
+                      <CarouselArrowRight></CarouselArrowRight>
                     </span>
                   </button>
                 </div>
